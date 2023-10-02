@@ -1,0 +1,74 @@
+.main {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    margin-right: 5%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    flex-wrap: wrap;
+}
+
+.container {
+    flex: 0 0 calc(40% - 50px);
+    margin-top:5%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    float:left;
+    
+}
+.container div{
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
+}
+.container img {
+    justify-content: center;
+    max-width: 100%;
+    height:auto;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+
+
+}
+.carousel{
+    display:none;
+    margin-left: 10%;
+}
+
+.carousel img {
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+      display: block;
+    }
+    .container{
+    display: none;
+    }
+  }
+
+.detail-container{
+    float:left;
+    margin-left:10%;
+}
+
+@media (max-width: 768px) {
+    /* Ekran boyutu 768 piksel veya daha küçükse */
+    .carousel-container,
+    .detail-container {
+      float: none; /* Yan yana düzenlemeyi kaldır */
+      width: 100%; /* Tam genişlik */
+    }
+  }
+.title {
+
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+

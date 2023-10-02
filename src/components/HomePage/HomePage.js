@@ -1,7 +1,7 @@
-import './shopPage.css';
+import './homePage.css';
 import ImageGallery from './imageGallery';
 
-function ShopPage() {
+function HomePage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -42,4 +42,4 @@ function ShopPage() {
 }
 
 
-export default ShopPage;
+export default HomePage;
