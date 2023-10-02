@@ -5,6 +5,7 @@ import ShopPage from '../ShopPage/ShopPage';
 import CheckOut from '../Checkout/checkout';
 import LoginPage from '../LoginPage/Login';
 import EmailPage from '../EmailPage/Email';
+import ProductsPage from '../Products/ProductsPage';
 
 
 const Router = () => {
@@ -14,6 +15,7 @@ const Router = () => {
       <Route exact path='/checkout' element={<CheckOut/>}></Route>
       <Route exact path='/login' element={<LoginPage/>}></Route>
       <Route exact path='login_email' element={<EmailPage/>}></Route>
+      <Route exact path='/products' element={<ProductsPage/>}></Route>
     </Routes>
   );
 }
