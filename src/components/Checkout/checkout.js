@@ -1,9 +1,18 @@
 import React from 'react';
+import ShopPopup from './popup.jsx'
 import './checkout.css';
 
-function CheckOut(){
-    return <div className='page row'>
-        <div className='column shippingInfo'>
+
+function CheckOut({src, name, price, size, quantity}){
+
+    const subTotal=quantity*price;
+    const shipping=20;
+    const total=subTotal+shipping;
+
+
+    return <div className='checkout'>
+        <div className='responsive space-evenly'>
+        <div className='column shippingInfo gap'>
             <h1>Checkout</h1>
             <h2>Shipping Information </h2>
             <div className='row gap'>
@@ -26,39 +35,41 @@ function CheckOut(){
                 <input placeholder='Year'/>
                 <input placeholder='CVC'/>
             </div>
-            <button className='buyButton'>Pay with card</button>
+            <ShopPopup/>
+            
         </div>
         <div className='cartInfo column gap'>
             <h2>Your cart</h2>
             <div className='row product'>
                <div className='row gap'>
-                    <img src="/images/fila.png" alt="fila" />
+                    <img src={src} alt={name} />
                     <div className='column productInfo'>
-                        <h2>Product</h2>
-                        <p>Size: L</p>
-                        <p>Quantity: 1</p>
-                        <h2>99$</h2>
+                        <h2>{name}</h2>
+                        <p>Size: {size}</p>
+                        <p>Quantity: {quantity}</p>
+                        <h2>${price}</h2>
                     </div>
                 </div> 
                 <button className='removeButton'>Remove</button>
             </div>
             <div className='row space-between'>
                 <p>Subtotal</p>
-                <p>$200</p>
+                <p>${subTotal}</p>
             </div>
             <div className='row space-between'>
                 <p>Shipping</p>
-                <p>$20</p>
+                <p>${shipping}</p>
             </div>
             <div className='divider'></div>
             <div className='row space-between'>
                 <p>Total</p>
-                <p>$220</p>
+                <p>${total}</p>
             </div>
             
             
         </div>
     </div>
+        </div>
 }
 
 export default CheckOut;

@@ -1,84 +1,91 @@
 
 
-*{
+.checkout *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.page{
+.checkout{
     background-color: white;
     margin-top: 100px;
-    justify-content: space-evenly;
 }
-.row{
+.checkout .row{
     display: flex;
     flex-direction: row;
 }
-.column{
+.checkout .responsive{
+    display: flex;
+    flex-direction: row;
+}
+.checkout .column{
     display: flex;
     flex-direction: column;
 }
-.gap{
+.checkout .gap{
     gap: 10px;
 }
-.divider{
+.checkout .divider{
     border-bottom: 2px solid black;
 }
-.space-between{
+.checkout .space-between{
     justify-content: space-between;
     display: flex;
 }
-.shippingInfo{
-    max-width: 400px;
-    gap: 10px;
+
+.checkout .space-evenly{
+    justify-content: space-evenly;
+
 }
-.shippingInfo h2{
+.checkout .shippingInfo{
+    max-width: 400px;
+}
+.checkout .shippingInfo h2{
     font-weight: 400;
 }
-.shippingInfo input{
+.checkout .shippingInfo input{
     height: 40px;
     width: 100%;
     border-radius: 0;
     padding: 5px 10px;
     border-color: black;
 }
-.cartInfo{
+.checkout .cartInfo{
     max-width: 400px;
     width: 100%;
 }
-.cartInfo h2{
+.checkout .cartInfo h2{
     font-weight: 400;
 }
-.product{
+.checkout .product{
     justify-content: space-between;
     height: 130px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(144, 144, 144, 1);
     ;
 }
-.product img{
+.checkout .product img{
     max-width: 100px;
     height: auto;
     object-fit: contain;
 }
-.product h2{
+.checkout .product h2{
     font-weight: bold;
 
 }
-.productInfo{
+.checkout .productInfo{
     justify-content: space-between;
     
 }
-.removeButton{
+.checkout .removeButton{
     border: none;
     background-color: inherit;
     align-self: self-end;
     text-decoration: underline;
 }
-.removeButton:hover{
+.checkout .removeButton:hover{
     font-weight: bold;
 }
-.buyButton{
+.checkout .buyButton{
     height: 40px;
     border-radius: 0px;
     border: 0;
@@ -86,18 +93,62 @@
     color: white;
 }
 
+.modal {
+    font-size: 12px;
+  }
+.popup-content{
+    width: 400px;
+}
+.modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+  }
+  .modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: end;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 0px;
+    top: 0px;
+    font-size: 24px;
+
+  }
+
+  .modal  .button{
+    height: 40px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    border: 0;
+    background-color: black;
+    color: white;
+  }
 
 @media (max-width: 768px){
-    .page{
+    .checkout .responsive{
         flex-direction: column-reverse;
         align-items: center;
         padding: 0px 10px;
         margin-top: 20px;
     }
-    .cartInfo{
+    .checkout .cartInfo{
         margin-bottom: 50px;
     }
-    .shippingInfo{
+    .checkout .shippingInfo{
         padding-bottom: 50px;
     }
 }
