@@ -1,0 +1,17 @@
+
+.product-card{
+    margin-top: 1em;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card h6{
+    font-weight: 600;
+    margin-bottom: .4em;
+    margin-top: 1.5em;
+}
+
