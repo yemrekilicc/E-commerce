@@ -1,7 +1,19 @@
 import { BsHandbag } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { useCart } from './CartContext.js';
 
 const Navbar = () => {
+  const cart=useCart();
+  var size=0;
+
+  function cartSize(item){
+    if(cart){
+      cart.forEach(element => {
+        size+=element.quantity;
+      });
+    }
+    return size;
+  }
   return (
     <div>
       <div className='flex items-center bg-black h-14'>
@@ -19,6 +31,7 @@ const Navbar = () => {
           <div className='flex space-x-4'>
             <a href='#' className='flex items-center text-white'>
               <BsHandbag />
+              <p>{cartSize()}</p>
             </a>
             {/* <a href='#' className='text-white'>
               Login

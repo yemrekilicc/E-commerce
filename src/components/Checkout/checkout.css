@@ -9,6 +9,16 @@
     background-color: white;
     margin-top: 100px;
 }
+.checkout h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+.checkout h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
 .checkout .row{
     display: flex;
     flex-direction: row;
