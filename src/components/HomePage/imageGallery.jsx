@@ -5,19 +5,19 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function ImageGallery() {
   return (
-    <Carousel showThumbs={false} showStatus={false} autoPlay={true} interval={3000}>
+    <Carousel showThumbs={false} showStatus={false} autoPlay={true} interval={3000} infiniteLoop={true}>
       
       <div class="carousel">
-        <img  src="https://picsum.photos/id/200/800/450" alt="Resim 1" />
-        <p className="legend">Resim 1 Açıklama</p>
+        <img  src="/images/h-1.jpg" alt="Resim 1" />
+        <p className="c-legend">Shop Now!</p>
       </div>
       <div class="carousel">
-        <img src="https://picsum.photos/id/300/800/450" alt="Resim 2" />
-        <p className="legend">Resim 2 Açıklama</p>
+        <img src="/images/h-2.jpg" alt="Resim 2" />
+        <p className="c-legend">Shop the Fall Collection!</p>
       </div>
       <div class="carousel">
-        <img src="https://picsum.photos/id/400/800/450" alt="Resim 3" />
-        <p className="legend">Resim 3 Açıklama</p>
+        <img src="/images/h-3.jpg" alt="Resim 3" />
+        <p className="c-legend">Click for details</p>
       </div>
       
     </Carousel>
