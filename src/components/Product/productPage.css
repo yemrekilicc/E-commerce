@@ -1,7 +1,6 @@
-.main {
+.p-main {
     font-family: 'Public Sans', sans-serif;
-    margin: 0;
-    margin-right: 5%;
+    margin: 5%;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -10,32 +9,38 @@
     flex-wrap: wrap;
 }
 
-.container {
-    flex: 0 0 calc(40% - 50px);
-    margin-top:5%;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    float:left;
-    
+.p-table {
+    display: block;
+    width: 40%;
+    height: 80%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    float: right;
+    border-collapse: separate;
+    border-spacing: 0.5em;
 }
-.container div{
-    flex: 0 0 calc(50% - 10px);
-    box-sizing: border-box;
-}
-.container img {
-    justify-content: center;
-    max-width: 100%;
-    height:auto;
-    box-sizing: border-box;
-    float: left;
-    position: relative;
 
+.p-table img {
+    display: block;
+    width: 100%;
+    height: auto;
 
 }
-.carousel{
-    display:none;
+
+.p-table td {
+    margin: 0.5em;
+}
+
+.detail-container {
+    width: 40%;
+    min-height: 40%;
     margin-left: 10%;
+    float: left;
+    overflow: hidden;
+}
+
+.product-carousel {
+    display: none;
 }
 
 .carousel img {
@@ -43,32 +48,114 @@
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .carousel {
-      display: block;
-    }
-    .container{
-    display: none;
-    }
-  }
+.p-title {
+    font-size:30pt;
+    font-weight: bolder;
+}
 
-.detail-container{
-    float:left;
-    margin-left:10%;
+.p-price{
+    font-size:20pt;
+    font-weight: bolder;
+}
+
+.p-text{
+    color: gray;
+    font-size: 20px;
+    margin: 3% 0;
+}
+
+.color-options{
+    display: flex;
+    gap: 10px;
+    margin: 2% 0 5% 0;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%;
+    cursor: pointer; 
+    border: 2px solid #000; 
+}
+
+.color-1{
+    background-color: blue;
+}
+.color-2{
+    background-color:brown;
+}
+.color-3{
+    background-color:white;
+}
+.color-4{
+    background-color:black;
+}
+
+.size-box{
+    min-width: 3em;
+    min-height: 3em;
+    border:solid 1px;
+    margin: 2% 2% 5% 0;
+}
+
+.size-box:hover{
+    border:solid 2px;
+    font-weight: bolder;
+}
+
+.size-box:focus{
+    border:solid 2px;
+    font-weight: bolder;
+}
+
+.p-info{
+    margin: 2% 2% 1% 0;
+}
+
+.add-button{
+    background-color: #000;
+    color:white;
+    padding: 10px;
+    margin-right: 5%;
+}
+
+.p-flex{
+    display: flex;
+    font-weight:bolder;
+}
+
+.p-number{
+    max-width:75px;
+    color: #010101;
+    font-size:15px;
+    font-weight:bold;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    
+    padding:0;
 }
 
 @media (max-width: 768px) {
+    .product-carousel {
+        display: block;
+    }
+
+    .p-table {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
     /* Ekran boyutu 768 piksel veya daha küçükse */
     .carousel-container,
     .detail-container {
-      float: none; /* Yan yana düzenlemeyi kaldır */
-      width: 100%; /* Tam genişlik */
+        float: none;
+        /* Yan yana düzenlemeyi kaldır */
+        width: 100%;
+        /* Tam genişlik */
     }
-  }
-.title {
-
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 0;
 }
-

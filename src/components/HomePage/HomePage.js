@@ -25,14 +25,14 @@ function HomePage() {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, explicabo.
         </p>
         <button class="shop-all">Shop All</button>
-        <div className="container-wrapper">
-          <div className="container">
+        <div className="hp-container-wrapper">
+          <div className="hp-container">
             <img src="https://picsum.photos/id/200/400/600" alt="Görsel 1" />
           </div>
-          <div className="container">
+          <div className="hp-container">
             <img src="https://picsum.photos/id/500/400/600" alt="Görsel 2" />
           </div>
-          <div className="container">
+          <div className="hp-container">
             <img src="https://picsum.photos/id/100/400/600" alt="Görsel 3" />
           </div>
         </div>

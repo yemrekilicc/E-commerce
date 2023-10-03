@@ -9,6 +9,7 @@ import ProductsPage from '../ProductsPage/ProductsPage';
 import ProductPage from '../Product/productPage';
 
 
+
 const Router = () => {
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
@@ -18,6 +19,7 @@ const Router = () => {
       <Route exact path='login_email' element={<EmailPage/>}></Route>
       <Route exact path='/products' element={<ProductsPage/>}></Route>
       <Route exact path='/product_page' element={<ProductPage/>}></Route>
+
 
 
     </Routes>

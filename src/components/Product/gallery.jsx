@@ -1,10 +1,11 @@
 import React from 'react';
+import './productPage.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Gallery() {
   return (
-    <Carousel showThumbs={false}>
+    <Carousel class="product-carousel" showThumbs={false}>
       
       <div class="carousel">
         <img  src="https://picsum.photos/id/200/500" alt="Resim 1" />
