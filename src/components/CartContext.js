@@ -1,5 +1,4 @@
 import { createContext, useContext, useReducer } from 'react';
-
 const CartContext = createContext(null);
 const CartDispatchContext = createContext(null);
 
@@ -33,7 +32,7 @@ function cartReducer(cart, action) {
     case 'added': {
       return [...cart, {
         id: action.id,
-        src: action.src,
+        image: action.image,
         name: action.name,
         price: action.price,
         size: action.size,

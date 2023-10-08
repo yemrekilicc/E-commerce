@@ -1,6 +1,9 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import { Link } from 'react-router-dom';
 import './ProductsPage.css'
+import data from '../shoes.json'
+
 
 let products = [ {src:  'https://akn-ss.a-cdn.akinoncloud.com/products/2022/11/08/540679/3e77bf33-93fc-49f4-b9da-568ac62fa930.jpg',
                     name: 'Adidas', price: '199$', size: '42'},
@@ -115,8 +118,9 @@ function ProductsPage() {
             <section className="products-section">
                     <div className="gallery">
                       {/* <ProductCard className="card" src="https://akn-ss.a-cdn.akinoncloud.com/products/2022/11/08/540679/3e77bf33-93fc-49f4-b9da-568ac62fa930.jpg" name="Adidas" price="199$" size="42" /> */}
-                        {products.map((product) => (
-                            <ProductCard className="card" src={product.src} name={product.name} price={product.price} size={product.size} />
+                        {data.map((product) => (
+                            <Link key={product.id} to={"/product_page/"+product.id} ><ProductCard className="card"  src={product.image} name={product.name} price={product.price} id={product.id}  /></Link>
+                            
                         ))}
 
                     </div>

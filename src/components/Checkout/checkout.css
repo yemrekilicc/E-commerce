@@ -47,7 +47,7 @@
 
 }
 .checkout .shippingInfo{
-    max-width: 400px;
+    max-width: 500px;
 }
 .checkout .shippingInfo h2{
     font-weight: 400;
@@ -60,7 +60,7 @@
     border-color: black;
 }
 .checkout .cartInfo{
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 .checkout .cartInfo h2{
@@ -68,7 +68,6 @@
 }
 .checkout .product{
     justify-content: space-between;
-    height: 130px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(144, 144, 144, 1);
     ;

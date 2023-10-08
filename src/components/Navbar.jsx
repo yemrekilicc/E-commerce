@@ -1,20 +1,29 @@
 import { BsHandbag } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext.js';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-const Navbar = () => {
-  const cart=useCart();
-  var size=0;
 
-  function cartSize(item){
-    if(cart){
-      cart.forEach(element => {
-        size+=element.quantity;
-      });
-    }
-    return size;
+class Navbar extends Component {
+  state = {
+    cart: [],
+    size:0,
+  };
+  cartSize = () => {
+    var size=0;
+      if(this.state.cart){
+        this.state.cart.forEach(element => {
+          size+=element.quantity;
+          this.setState({size:size});
+        });
+      }else{
+        this.setState({size:0});
+      }
   }
-  return (
+  render(){
+
+    return (
     <div>
       <div className='flex items-center bg-black h-14'>
         <div className='flex justify-between text-white w-full max-w-screen-xl mx-auto px-4'>
@@ -29,10 +38,10 @@ const Navbar = () => {
             <a href='#'>About</a>
           </div>
           <div className='flex space-x-4'>
-            <a href='#' className='flex items-center text-white'>
+            <Link to='/cart' className='flex items-center text-white'>
               <BsHandbag />
-              <p>{cartSize()}</p>
-            </a>
+              <p onChange={this.cartSize}>{this.state.size}</p>
+            </Link>
             {/* <a href='#' className='text-white'>
               Login
             </a> */}
@@ -42,6 +51,24 @@ const Navbar = () => {
       </div>
     </div>
   );
+  }; 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    var size=0;
+    if (prevProps.cart !== this.props.cart) {
+      if(this.props.cart.length!==0){
+        this.props.cart.forEach(element => {
+          size+=element.quantity;
+          this.setState({size:size});
+        });
+      }else{
+        this.setState({size:0});
+      }
+    }
+}
 };
-
-export default Navbar;
+function mapStateToProps(state) {
+  return {
+    cart: state.cartReducer.cart,
+  };
+}
+export default connect(mapStateToProps)(Navbar);
