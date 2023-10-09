@@ -1,4 +1,4 @@
-# E-commerce Web Appilkrepo
+# E-commerce Web App
 To run the e-commerce web app on your local machine, follow these step-by-step instructions
 
 # Prerequisites
