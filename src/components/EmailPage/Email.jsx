@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiLogoFacebook, BiLogoGoogle } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Email = () => {
   return (
@@ -21,10 +22,12 @@ const Email = () => {
               <BiLogoGoogle className='text-black h-6 w-6  mr-2' />
               <span className='text-center'>Continue with Google</span>
             </div>
+            <Link to='/login'>
             <div className='flex justify-center border border-gray-300 rounded-none items-center p-2 cursor-pointer'>
               <AiOutlineMail className='text-black h-6 w-6 mr-2' />
               <span className='text-center'>Continue with Email</span>
             </div>
+            </Link>
           </div>
         </div>
         <p className='text-gray-400 font-semibold mt-5'>

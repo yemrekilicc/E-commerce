@@ -10,7 +10,9 @@ function HomePage() {
         <p class="grey-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, explicabo.
         </p>
+        <Link to='/products'>
         <button class="shop-all">Shop All</button>
+        </Link>
         <div className="gallery-container">
           <Link to="/products"><ImageGallery /></Link>
         </div>
@@ -25,7 +27,9 @@ function HomePage() {
         <p class="grey-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, explicabo.
         </p>
+        <Link to='/products'>
         <button class="shop-all">Shop All</button>
+        </Link>
         <div className="hp-container-wrapper">
           <div className="hp-container">
           <Link to="/products">
