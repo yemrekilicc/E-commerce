@@ -7,6 +7,8 @@ import data from '../shoes.json'
 
 function ProductsPage() {
     const [selectedCategories, setSelectedCategories] = useState([]);
+    // Add state for selected sizes
+    const [selectedSizes, setSelectedSizes] = useState([]);
   
     // Function to handle category checkbox changes
     const handleCategoryChange = (category) => {
@@ -17,19 +19,29 @@ function ProductsPage() {
       }
     };
 
-  
-    // Filter products based on selected categories
-    const filteredProducts = data.filter((product) => {
-        console.log('Selected Categories:', selectedCategories);
-        console.log('Product Category:', product.category.toLowerCase());
+    // Function to handle size checkbox changes
+    const handleSizeChange = (size) => {
+        if (selectedSizes.includes(size)) {
+        setSelectedSizes(selectedSizes.filter((s) => s !== size));
+        } else {
+        setSelectedSizes([...selectedSizes, size]);
+        }
+    };
 
-        if (
-            selectedCategories.length === 0 ||
-            selectedCategories.includes(product.category.toLowerCase())
-          ) {
-            return true;
-          }
-          return false;
+  
+    // Filter products based on selected categories and sizes
+    const filteredProducts = data.filter((product) => {
+        const categoryMatch =
+        selectedCategories.length === 0 ||
+        selectedCategories.includes(product.category.toLowerCase());
+    
+      const sizeMatch =
+        selectedSizes.length === 0 ||
+        product.size.some((availableSize) =>
+          selectedSizes.includes(availableSize.toString())
+        );
+    
+      return categoryMatch && sizeMatch;
     });
 
   return (
@@ -82,37 +94,50 @@ function ProductsPage() {
                         <ul className='size-list'>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('36')}
+                                onChange={() => handleSizeChange('36')}
+                                />
                                 36
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('37')}
+                                onChange={() => handleSizeChange('37')}/>
                                 37
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('38')}
+                                onChange={() => handleSizeChange('38')}/>
                                 38
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('39')}
+                                onChange={() => handleSizeChange('39')}/>
                                 39
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('40')}
+                                onChange={() => handleSizeChange('40')}/>
                                 40
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedSizes.includes('41')}
+                                onChange={() => handleSizeChange('41')}/>
                                 41
                                 </label>
                             </li>
