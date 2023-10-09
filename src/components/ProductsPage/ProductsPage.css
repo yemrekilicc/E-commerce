@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.products-page body {
+    font-family: 'Inter', sans-serif;
+}
+
+.products-page .hero-section {
+    background: black;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+}
+
+.products-page .container-hero {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.products-page .hero-text {
+    width: 90%;
+    max-width: 450px;
+    color: white;
+}
+
+.products-page h2{
+    font-weight: 600;
+    font-size :2.25rem;
+}
+
+.products-page .flex  {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.products-page .filter-section {
+    width: 18%;
+    padding: 2rem 0;
+}
+
+.products-page .products-section {
+    width: 80%;
+    min-height: 100vh;
+
+}
+
+
+.products-page h4{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.products-page h6{
+    font-weight: 600;
+    margin-bottom: .4em;
+    margin-top: 1.5em;
+}
+
+
+.products-page input[type="checkbox"] {
+    border: 2px solid #000;
+    margin-right: 1em;
+}
+
+.products-page .card{
+    margin-top: 1em;
+} 
+
+.products-page .gallery {
+    margin: 1rem 0;
+    display: grid;
+    gap: 2.3em;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "card card card"
+    "card card card";
+}
+
+

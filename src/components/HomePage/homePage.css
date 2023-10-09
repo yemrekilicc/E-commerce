@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;600&display=swap');
+
+
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 3vmin);
+  color: rgb(8, 0, 0);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.title {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.grey-text {
+  font-family: 'Public Sans', sans-serif;
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+}
+
+.shop-all {
+  background-color: white;
+  border:solid 1px;
+  color: black;
+  font-size: 20px;
+  padding: 20px 40px;
+  margin:1em;
+  transition: transform 0.7s ease-in-out;
+
+}
+
+.shop-all:hover{
+  background-color: black;
+  color:white;
+  transition: 0.3s;
+
+}
+
+.carousel {
+  margin: auto;
+  max-width: 1000px;
+  max-height: 560px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-arrow{
+  max-height: 100%; 
+  overflow: hidden;
+}
+
+.c-legend {
+  position: absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0.4;
+}
+
+.carousel:hover .c-legend{
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.brands-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.brands-container img {
+  max-width: 180px;
+  height: auto;
+  margin: 0 5%;
+
+  flex: 1 0 calc(50% - 10px);
+}
+
+.hp-container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5% 1%;
+  width: 100%;
+}
+
+.hp-container {
+  min-height: 300px;
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hp-container:hover .legend{
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.legend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hp-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hp-container:hover img{
+  transform:scale(1.1);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;}
+
+
+
+.hp-container:nth-child(1),
+.hp-container:nth-child(3) {
+  transform: translateY(40px);
+}
+
+
+
+@media (max-width: 768px) {
+  .brands-container {
+    flex-wrap: wrap;
+    flex: 1 0 calc(100% - 20px);
+  }
+
+  .carousel {
+    max-width: 400;
+    max-height: 1000;
+  }
+
+  .hp-container {
+    width: 100%;
+    transform: translateY(0);
+    margin-bottom: 10px;
+  }
+
+  .hp-container {
+    width: 100%;
+    transform: translateY(0);
+    margin-bottom: 10px;
+  }
+
+  .hp-container:nth-child(1),
+  .hp-container:nth-child(2),
+  .hp-container:nth-child(3) {
+  transform: translateY(20px);
+  padding:5%;
+}
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
