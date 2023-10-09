@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductCard from './ProductCard'
 import { Link } from 'react-router-dom';
 import './ProductsPage.css'
@@ -6,6 +6,32 @@ import data from '../shoes.json'
 
 
 function ProductsPage() {
+    const [selectedCategories, setSelectedCategories] = useState([]);
+  
+    // Function to handle category checkbox changes
+    const handleCategoryChange = (category) => {
+      if (selectedCategories.includes(category)) {
+        setSelectedCategories(selectedCategories.filter((cat) => cat !== category));
+      } else {
+        setSelectedCategories([...selectedCategories, category]);
+      }
+    };
+
+  
+    // Filter products based on selected categories and sizes
+    const filteredProducts = data.filter((product) => {
+        console.log('Selected Categories:', selectedCategories);
+        console.log('Product Category:', product.category.toLowerCase());
+
+        if (
+            selectedCategories.length === 0 ||
+            selectedCategories.includes(product.category.toLowerCase())
+          ) {
+            return true;
+          }
+          return false;
+    });
+
   return (
     <div className="products-page">
             <section className="hero-section">
@@ -27,22 +53,28 @@ function ProductsPage() {
                                 <label>
                                 <input 
                                 type="checkbox"
-                                // checked={checked} 
-                                // onChange={handleChange}
+                                checked={selectedCategories.includes('men')}
+                                onChange={() => handleCategoryChange('men')}
                                 />
                                 Men
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
+                                <input type="checkbox" 
+                                checked={selectedCategories.includes('women')}
+                                onChange={() => handleCategoryChange('women')}
+                                />
                                 Women
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                <input type="checkbox" />
-                                Kids
+                                <input type="checkbox" 
+                                checked={selectedCategories.includes('unisex')}
+                                onChange={() => handleCategoryChange('unisex')}
+                                />
+                                Unisex
                                 </label>
                             </li>
                         </ul>
@@ -51,19 +83,13 @@ function ProductsPage() {
                             <li>
                                 <label>
                                 <input type="checkbox" />
-                                32
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                <input type="checkbox" />
-                                34
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                <input type="checkbox" />
                                 36
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                <input type="checkbox" />
+                                37
                                 </label>
                             </li>
                             <li>
@@ -75,19 +101,19 @@ function ProductsPage() {
                             <li>
                                 <label>
                                 <input type="checkbox" />
+                                39
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                <input type="checkbox" />
                                 40
                                 </label>
                             </li>
                             <li>
                                 <label>
                                 <input type="checkbox" />
-                                42
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                <input type="checkbox" />
-                                44
+                                41
                                 </label>
                             </li>
                         </ul>
@@ -96,7 +122,7 @@ function ProductsPage() {
         
             <section className="products-section">
                     <div className="gallery">
-                        {data.map((product) => (
+                    {filteredProducts.map((product) => (
                             <Link key={product.id} to={"/product_page/"+product.id} ><ProductCard className="card"  src={product.image} name={product.name} price={product.price} id={product.id}  /></Link>
                             
                         ))}

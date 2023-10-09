@@ -48,14 +48,14 @@ function ProductPage() {
                 <p className="p-text">{findItem(idInt).description}</p>
                 <p><b>Size</b></p>
                 <div className="p-size">
-                    <button onClick={()=>{buttonClick(30)}} className="size-box">30 </button>
-                    <button onClick={()=>{buttonClick(31)}} className="size-box">31  </button>
-                    <button onClick={()=>{buttonClick(32)}} className="size-box">32  </button>
-                    <button onClick={()=>{buttonClick(33)}} className="size-box">33  </button>
-                    <button onClick={()=>{buttonClick(34)}} className="size-box">34 </button>
-                    <button onClick={()=>{buttonClick(35)}} className="size-box">35</button>
+                    <button onClick={()=>{buttonClick(36)}} className="size-box">36 </button>
+                    <button onClick={()=>{buttonClick(37)}} className="size-box">37  </button>
+                    <button onClick={()=>{buttonClick(38)}} className="size-box">38  </button>
+                    <button onClick={()=>{buttonClick(39)}} className="size-box">39  </button>
+                    <button onClick={()=>{buttonClick(40)}} className="size-box">40 </button>
+                    <button onClick={()=>{buttonClick(41)}} className="size-box">41</button>
                 </div>
-                <p className="p-info">Lorem ipsum dolor sit amet.</p>
+                {/* <p className="p-info">Lorem ipsum dolor sit amet.</p> */}
 
                 <div className="p-flex">
                     <AddToCart image={findItem(idInt).image} name={findItem(idInt).name} price={findItem(idInt).price} size={shoeSize} quantity={shoeQuantity}/>

@@ -9,7 +9,8 @@
     "rating": {
       "rate": 3.9,
       "count": 120
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "rating": {
       "rate": 4.1,
       "count": 259
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "rating": {
       "rate": 4.7,
       "count": 500
-    }
+    },
+    "category": "men"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "rating": {
       "rate": 2.1,
       "count": 430
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "rating": {
       "rate": 4.6,
       "count": 400
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "rating": {
       "rate": 3.9,
       "count": 70
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "rating": {
       "rate": 3,
       "count": 400
-    }
+    },
+    "category": "women"
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "rating": {
       "rate": 1.9,
       "count": 100
-    }
+    },
+    "category": "women"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "rating": {
       "rate": 3.3,
       "count": 203
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
     "rating": {
       "rate": 2.9,
       "count": 470
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@
     "rating": {
       "rate": 4.8,
       "count": 319
-    }
+    },
+    "category": "men"
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
     "rating": {
       "rate": 4.8,
       "count": 400
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 13,
@@ -153,7 +165,8 @@
     "rating": {
       "rate": 2.9,
       "count": 250
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
     "rating": {
       "rate": 2.2,
       "count": 140
-    }
+    },
+    "category": "men"
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
     "rating": {
       "rate": 2.6,
       "count": 235
-    }
+    },
+    "category": "women"
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
     "rating": {
       "rate": 2.9,
       "count": 340
-    }
+    },
+    "category": "women"
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
     "rating": {
       "rate": 3.9,
       "count": 120
-    }
+    },
+    "category": "men"
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
     "rating": {
       "rate": 4.7,
       "count": 130
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 19,
@@ -225,7 +243,8 @@
     "rating": {
       "rate": 4.5,
       "count": 146
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
     "rating": {
       "rate": 3.9,
       "count": 120
-    }
+    },
+    "category": "men"
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
     "rating": {
       "rate": 3,
       "count": 190
-    }
+    },
+    "category": "men"
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
     "rating": {
       "rate": 3.9,
       "count": 120
-    }
+    },
+    "category": "women"
   },
   {
     "id": 24,
@@ -273,7 +295,8 @@
     "rating": {
       "rate": 3.9,
       "count": 210
-    }
+    },
+    "category": "men"
   },
   {
     "id": 25,
@@ -285,7 +308,8 @@
     "rating": {
       "rate": 1.9,
       "count": 220
-    }
+    },
+    "category": "women"
   },
   {
     "id": 26,
@@ -297,7 +321,8 @@
     "rating": {
       "rate": 3.9,
       "count": 120
-    }
+    },
+    "category": "men"
   },
   {
     "id": 27,
@@ -309,7 +334,8 @@
     "rating": {
       "rate": 4.7,
       "count": 130
-    }
+    },
+    "category": "men"
   },
   {
     "id": 28,
@@ -321,7 +347,8 @@
     "rating": {
       "rate": 2.7,
       "count": 130
-    }
+    },
+    "category": "men"
   },
   {
     "id": 29,
@@ -333,7 +360,8 @@
     "rating": {
       "rate": 4.7,
       "count": 130
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 30,
@@ -345,7 +373,8 @@
     "rating": {
       "rate": 1.7,
       "count": 160
-    }
+    },
+    "category": "unisex"
   },
   {
     "id": 31,
@@ -357,6 +386,7 @@
     "rating": {
       "rate": 4.7,
       "count": 130
-    }
+    },
+    "category": "unisex"
   }
 ]
