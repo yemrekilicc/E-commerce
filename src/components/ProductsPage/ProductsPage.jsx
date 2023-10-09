@@ -18,7 +18,7 @@ function ProductsPage() {
     };
 
   
-    // Filter products based on selected categories and sizes
+    // Filter products based on selected categories
     const filteredProducts = data.filter((product) => {
         console.log('Selected Categories:', selectedCategories);
         console.log('Product Category:', product.category.toLowerCase());

@@ -17,7 +17,7 @@ function shopPopup() {
           </button>
           <div className="header"> Thanks for your purchase </div>
 
-          <div className="actions">
+          <div className="actions" style={{ textAlign: "center" }}>
             <Link to="/" >
               <button
                 className="button"

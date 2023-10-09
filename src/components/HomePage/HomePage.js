@@ -6,15 +6,15 @@ function HomePage() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 class="title">Make a good journey with Shoe</h2>
+        <h2 class="title">Make a good journey with your shoes</h2>
         <p class="grey-text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, explicabo.
+        Discover the perfect blend of style, comfort, and quality right at your fingertips.
         </p>
         <Link to='/products'>
         <button class="shop-all">Shop All</button>
         </Link>
         <div className="gallery-container">
-          <Link to="/products"><ImageGallery /></Link>
+          <ImageGallery />
         </div>
         <div className="brands-container">
           <img src="/images/fila.png" alt="fila" />
@@ -25,7 +25,7 @@ function HomePage() {
 
         <h2 class="title">Our latest arrivals</h2>
         <p class="grey-text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, explicabo.
+        Be the trendsetter among your friends with these statement pieces.
         </p>
         <Link to='/products'>
         <button class="shop-all">Shop All</button>
